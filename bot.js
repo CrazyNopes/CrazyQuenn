@@ -107,5 +107,10 @@ client.on('warn', e => {
 client.on('error', e => {
   console.log(chalk.bgRed(e.replace(regToken, 'that was redacted')));
 });
+// main.js
+var lodash = require('lodash');
+ 
+var output = lodash.without([1, 2, 3], 1);
+console.log(output);
 
 client.login(ayarlar.token);
